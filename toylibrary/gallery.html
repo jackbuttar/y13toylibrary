@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!-- Website title aswell as link to CSS file-->
+        <meta charset="utf-8">
+        <title>Cromwell Toy Library</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="normalize.css" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Cairo:400,700&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
+        <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    </head>
+
+    <body>
+        <!-- Website Navbar - Consistant across pages-->
+        <div class="container">
+            <nav>
+              <ul id="menu">
+                <li class="toggle">
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>
+                </li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="">TOYS</a></li>
+                <li><a href="">GALLERY</a></li>
+                <li><a href="">ADMIN</a></li>
+                <li><a href="contact.html">CONTACT/FIND</a></li>    
+              </ul>
+            </nav>
+        </div>
+
+        <div class="main_content"> <!-- "main_content" div adds a content container to the page aswell as a drop shadow to that container. -->
+            <div class="gallery">
+                <img src="images\toylibrary_logo.png">
+                <h1>Cromwell Toy Library Gallery</h1>
+                <h2>Get an idea of the toys Cromwell Toy Library has to offer</h2>
+
+                <article>
+                    <a data-fancybox="gallery" href="images\buzzLightyear.webp"> <img src="images\buzzLightyear.webp"></a>
+                    <a data-fancybox="gallery" href="images\cabbagePatchDoll.jpg"> <img src="images\cabbagePatchDoll.jpg"></a>
+                    <a data-fancybox="gallery" href="images\carcassonne.jpeg"> <img src="images\carcassonne.jpeg"></a>
+                    <a data-fancybox="gallery" href="images\catan.jpeg"> <img src="images\catan.jpeg"></a>
+                    <a data-fancybox="gallery" href="images\gameOfLife.webp"> <img src="images\gameOfLife.webp"></a>
+                    <a data-fancybox="gallery" href="images\ticketToRide.jpeg"> <img src="images\ticketToRide.jpeg"></a>
+                    <a data-fancybox="gallery" href="images\toyTruck.jpg"> <img src="images\toyTruck.jpg"></a>
+                </article>
+
+                <article>
+                    <h2>Cromwell Toy Library is a premium toy rental service</h2>
+                    <p>Email us your details if you'd like more information or to rent any toys. We'll get back to you within 24 hours with all the information you need to have a great toy rental experience</p>
+                    <div class="intro-block_gallery">
+                        <ul>
+                            <li><a href="index.html" class="button">Home</a></li>
+                            <li><a href="contact.html" class="button">Contact</a></li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+        
+
+        <div class="footer_content"> <!-- Simple footer with copyright info -->
+            <footer>
+                <p>© Cromwell College 2024 - Website by Jack Buttar</p>
+            </footer>
+         </div>
+
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+        <script src="index.js"></script>
+
+    </body>
+</html>

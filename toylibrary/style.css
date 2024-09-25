@@ -250,6 +250,17 @@ BODY ELEMENTS
     display: grid;
 }
 
+.index-blurb {
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 90px;
+}
+
+.index-blurb p {
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
 .intro-block {
 	background-color: #FEC601;
 	max-height: 400px;
@@ -310,6 +321,100 @@ BODY ELEMENTS
 #index-background a:hover {
 	color: #ffffff;
 }
+
+.gallery {
+	text-align: center;
+  padding-bottom: 0px;
+  padding-top: 25px;
+}
+
+.gallery a:hover{
+  color: #ffffff;
+}
+
+.gallery a {
+  font-weight: bold;
+}
+
+.gallery img{
+  max-width: 200px;
+  max-height: 200px;
+  padding-top: 25px;
+}
+
+.gallery h1 {
+  color:#04395E
+}
+
+.gallery h2 {
+  color:#04395E
+}
+
+.gallery p {
+  color:#04395E
+}
+
+.gallery img {
+  padding-top: 0px;
+}
+
+.intro-block_gallery a{
+	display: inline-block;
+	text-decoration: none;
+  color:#04395E;
+}
+.intro-block_gallery ul{
+	list-style-type: none;
+	padding: 0px;
+	margin-top: -35px;
+	text-align: center;
+}
+
+.intro-block_gallery li{
+	display: inline-block;
+	padding: 10px;
+}
+
+.contact {
+  text-align: center;
+  padding: 0px 100px;
+}
+
+.list_align{
+	list-style-type: none;
+  padding-right: 30px;
+}
+
+.contact-button a{
+	display: block;
+	text-decoration: none;
+	color:#04395E;
+}
+
+.contact-button a:hover{
+	color:#ffffff;
+}
+
+.contact-button h1 {
+	color: #04395E;
+	text-align: center;
+	font-size: 42px;
+}
+
+.contact-button ul{
+	list-style-type: none;
+	text-align: center;
+}
+
+.contact-button li{
+	display: inline-block;
+  font-weight: bold;
+  padding-right: 30px;
+  margin-top: -20px;
+  margin-bottom: -20px;
+}
+
+
 /* 
 
 FOOTER ELEMENTS

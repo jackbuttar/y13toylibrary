@@ -414,6 +414,27 @@ BODY ELEMENTS
   margin-bottom: -20px;
 }
 
+.location_image{
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 40px;
+  display: block;
+}
+
+/* Image adjustments for different screensizes*/
+@media (max-width: 750px) {
+  .location_image{
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 565px) {
+  .location_image{
+    max-width: 290px;
+  }
+}
+
 
 /* 
 

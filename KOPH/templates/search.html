@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+</nav>
+</div>
+<div class="content">
+
+
+{% block content %}
+<h3>Which member would you like to show rentals for?</h3>
+  <form method="post" class="w3-container">
+    <br>
+    <label for="member">Member Name:</label><input type="text" id="member" name="member" value="{{ request.form['member'] }}">
+    <br>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+
+{% endblock %}

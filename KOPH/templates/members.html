@@ -1,0 +1,29 @@
+<!-- This is how we extend the base layout so we don;t need to do it again! -->
+{% extends 'base.html' %}
+<!-- Now i can fill out the blocks that I want -->
+{% block content %}
+<table style="text-align:center;">
+    <tr>
+        <th width="200">ID</th>
+        <th width="200">NAME</th>
+        <th width="200">ADDRESS</th>
+        <th width="200">EMAIL</th>
+        <th width="200">PHONE</th>
+        <th width="200">START DATE</th>
+        <th width="200">PERIOD</th>
+    </tr>
+    <!-- iterate through the results use the symbols to show "code" in the template -->
+    {% for item in results%} 
+    <tr>
+        <td>{{ item[0] }}</td>
+        <td>{{ item[1] }}</td>
+        <td>{{ item[2] }}</td>
+        <td>{{ item[3] }}</td>
+        <td>{{ item[4] }}</td>
+        <td>{{ item[5] }}</td>
+        <td>{{ item[6] }}</td>
+    </tr>
+    <!-- must have an "endfor"! dont forget -->
+    {% endfor %}
+</table>
+{% endblock %}

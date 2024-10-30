@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!-- Website title aswell as link to CSS file-->
+        <meta charset="utf-8">
+        <title>Cromwell Toy Library</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/pythonStyle.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Cairo:400,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
+        <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    </head>
+
+    <body>
+        <!-- Website Navbar - Consistant across pages-->
+        <div class="container">
+            <nav>
+              <ul id="menu">
+                <li class="toggle">
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>
+                </li>
+                <li><a href="{{ url_for('home') }}">HOME</a></li>  <!-- Use Flask route name -->
+                <li><a href="{{ url_for('toys_public') }}">TOYS</a></li>  <!-- Use Flask route name -->
+                <li><a href="{{ url_for('gallery') }}">GALLERY</a></li>  <!-- Use Flask route name -->
+                <li><a href="{{ url_for('admin_login') }}">ADMIN</a></li>  <!-- Use Flask route name -->
+                <li><a href="{{ url_for('contact') }}">CONTACT/FIND</a></li>      
+              </ul>
+            </nav>
+        </div>
+
+        <div class="main_content"> <!-- "main_content" div adds a content container to the page aswell as a drop shadow to that container. -->
+            <article class="contact">
+                <p><strong>To join as a toy library member, a person needs to contact Cromwell Toy Library with the following information:</strong></p>
+                <ul class="list_align">
+                    <li>Full Name</li>
+                    <li>Physical Address</li>
+                    <li>Email Address</li>
+                    <li>Phone Number</li>
+                </ul>
+                    <p><strong>The above needs to be sent to the following Cromwell Toy Library email address:</strong></p>
+                    <p><a href="cromwell_toy_library@freeemails4u.com">cromwell_toy_library@freeemails4u.com</a> (or by clicking the button below)</p>
+                    <p><strong>Or you can talk to one of our staff members over the phone at:</strong></p>
+                    <p>03 445 1121</p>
+                    <p><strong>Membership will be confirmed by email.</strong></p>
+                    <p><strong>Additional information about the Toy Library and its products will be provided by email if asked</strong></p>   
+                <ul class="contact-button">                         
+                    <li><a href="mailto:cromwell_toy_library@freeemails4u.com" class="button">Contact Us!</a></li>
+                </ul>
+                <p><strong>If you would rather come into the Toy Library and talk to some of our staff we are located at:</strong></p>
+                <p>4 The Mall, Cromwell, 9310</p>
+                <img src="{{ url_for('static', filename='images/loc.png') }}" class="location_image" alt="Location Map">
+            </article>
+        </div>
+        
+
+        <div class="footer_content"> <!-- Simple footer with copyright info -->
+            <footer>
+                <p>© Cromwell College 2024 - Website by Jack Buttar</p>
+            </footer>
+         </div>
+
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+        <script src="index.js"></script>
+
+    </body>
+</html>

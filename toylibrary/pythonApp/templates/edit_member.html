@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="table_styling">
+    <h3>Edit Amount Owed for {{ member[1] }}</h3>  <!-- Assuming member[1] is the member name -->
+    <form method="post" class="w3-container">
+        <label for="amount_owed">Amount Owed:</label>
+        <input type="text" id="amount_owed" name="amount_owed" value="{{ member[3] }}" required>  <!-- Assuming member[3] is [Amount Owed] -->
+        <button type="submit">Update Amount Owed</button>
+    </form>
+</div>
+{% endblock %}

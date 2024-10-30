@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="dashboard-container">
+    <h3>Admin Dashboard</h3>
+    <div class="button-group">
+        <a href="{{ url_for('members') }}" class="btn">Members</a>
+        <a href="{{ url_for('rentals') }}" class="btn">Rentals</a>
+        <a href="{{ url_for('member_search') }}" class="btn">Member Search</a>
+        <a href="{{ url_for('on_rent') }}" class="btn">On Rent</a>
+        <a href="{{ url_for('oneyear_members') }}" class="btn">One Year Members</a>
+        <a href="{{ url_for('sixmonth_members') }}" class="btn">Six Month Members</a>
+        <a href="{{ url_for('new_item') }}" class="btn">New Item</a>
+        <a href="{{ url_for('new_member') }}" class="btn">New Member</a>
+        <a href="{{ url_for('new_rental') }}" class="btn">New Rental</a>
+        <a href="{{ url_for('search_rental') }}" class="btn">Search Rental</a>
+        <a href="{{ url_for('delete_item') }}" class="btn">Delete Item</a>
+        <a href="{{ url_for('search_member') }}" class="btn">Search Member</a>
+    </div>
+</div>
+
+<style>
+    .dashboard-container {
+        text-align: center;
+        margin: 20px;
+    }
+    .button-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn {
+        display: block;
+        margin: 10px;
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    .btn:hover {
+        background-color: #0056b3;
+    }
+</style>
+{% endblock %}

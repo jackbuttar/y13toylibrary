@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Website title as well as link to CSS file -->
+        <meta charset="utf-8">
+        <title>Cromwell Toy Library</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/pythonStyle.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Cairo:400,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
+    </head>
+
+    <body>
+        <!-- Website Navbar - Consistent across pages -->
+        <div class="container">
+            <nav>
+              <ul id="menu">
+                <li class="toggle">
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>
+                </li>
+                <li><a href="{{ url_for('home') }}">HOME</a></li>  <!-- Use Flask route name -->
+                <li><a href="{{ url_for('toys_public') }}">TOYS</a></li>  <!-- Use Flask route name -->
+                <li><a href="{{ url_for('gallery') }}">GALLERY</a></li>  <!-- Use Flask route name -->
+                <li><a href="{{ url_for('admin_login') }}">ADMIN</a></li>  <!-- Use Flask route name -->
+                <li><a href="{{ url_for('contact') }}">CONTACT/FIND</a></li>     
+              </ul>
+            </nav>
+        </div>
+
+        <div class="main_content"> <!-- "main_content" div adds a content container to the page as well as a drop shadow to that container. -->
+            <div class="gallery">
+                <img src="{{ url_for('static', filename='images/toylibrary_logo.png') }}" alt="Toy Library Logo">
+                <h1>Cromwell Toy Library Gallery</h1>
+                <h2>Get an idea of the toys Cromwell Toy Library has to offer</h2>
+
+                <article>
+                    <a data-fancybox="gallery" href="{{ url_for('static', filename='images/buzzLightyear.webp') }}">
+                        <img src="{{ url_for('static', filename='images/buzzLightyear.webp') }}" alt="Buzz Lightyear">
+                    </a>
+                    <a data-fancybox="gallery" href="{{ url_for('static', filename='images/cabbagePatchDoll.jpg') }}">
+                        <img src="{{ url_for('static', filename='images/cabbagePatchDoll.jpg') }}" alt="Cabbage Patch Doll">
+                    </a>
+                    <a data-fancybox="gallery" href="{{ url_for('static', filename='images/carcassonne.jpeg') }}">
+                        <img src="{{ url_for('static', filename='images/carcassonne.jpeg') }}" alt="Carcassonne">
+                    </a>
+                    <a data-fancybox="gallery" href="{{ url_for('static', filename='images/catan.jpeg') }}">
+                        <img src="{{ url_for('static', filename='images/catan.jpeg') }}" alt="Catan">
+                    </a>
+                    <a data-fancybox="gallery" href="{{ url_for('static', filename='images/gameOfLife.webp') }}">
+                        <img src="{{ url_for('static', filename='images/gameOfLife.webp') }}" alt="Game of Life">
+                    </a>
+                    <a data-fancybox="gallery" href="{{ url_for('static', filename='images/ticketToRide.jpeg') }}">
+                        <img src="{{ url_for('static', filename='images/ticketToRide.jpeg') }}" alt="Ticket to Ride">
+                    </a>
+                    <a data-fancybox="gallery" href="{{ url_for('static', filename='images/toyTruck.jpg') }}">
+                        <img src="{{ url_for('static', filename='images/toyTruck.jpg') }}" alt="Toy Truck">
+                    </a>
+                </article>
+
+                <article>
+                    <h2>Cromwell Toy Library is a premium toy rental service</h2>
+                    <p>Email us your details if you'd like more information or to rent any toys. We'll get back to you within 24 hours with all the information you need to have a great toy rental experience</p>
+                    <div class="intro-block_gallery">
+                        <ul>
+                            <li><a href="{{ url_for('home') }}" class="button">Home</a></li>
+                            <li><a href="{{ url_for('contact') }}" class="button">Contact</a></li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+        
+        <div class="footer_content"> <!-- Simple footer with copyright info -->
+            <footer>
+                <p>© Cromwell College 2024 - Website by Jack Buttar</p>
+            </footer>
+         </div>
+
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+        <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('[data-fancybox="gallery"]').fancybox();
+            });
+            </script>
+
+    </body>
+</html>

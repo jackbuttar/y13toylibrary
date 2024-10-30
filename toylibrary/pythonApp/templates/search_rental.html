@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+</nav>
+</div>
+<div class="table_styling">
+
+  {% block content %}
+  <h3>Search for Rental</h3>
+  <form method="post" class="w3-container">
+    <br>
+    <label for="rental_id">Rental ID:</label>
+    <input type="text" id="rental_id" name="rental_id" required>
+    <br>
+    <br>
+    <button type="submit">Search Rental</button>
+  </form>
+</div>
+{% endblock %}

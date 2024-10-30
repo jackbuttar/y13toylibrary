@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!-- Website title aswell as link to CSS file-->
+        <meta charset="utf-8">
+        <title>Cromwell Toy Library</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/pythonStyle.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Cairo:400,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
+        <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    </head>
+
+    <body>
+        <!-- Website Navbar - Consistant across pages-->
+        <div class="container">
+            <nav>
+              <ul id="menu">
+                <li class="toggle">
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>
+                </li>
+                <li><a href="{{ url_for('home') }}">HOME</a></li>  <!-- Use Flask route name -->
+                <li><a href="{{ url_for('toys_public') }}">TOYS</a></li>  <!-- Use Flask route name -->
+                <li><a href="{{ url_for('gallery') }}">GALLERY</a></li>  <!-- Use Flask route name -->
+                <li><a href="{{ url_for('admin_login') }}">ADMIN</a></li>  <!-- Use Flask route name -->
+                <li><a href="{{ url_for('contact') }}">CONTACT/FIND</a></li>    
+              </ul>
+            </nav>
+        </div>
+    <!-- This is the main page with most stuff we need in it -->
+    <!-- This starts and ends a 'block' that the child template will fill out with stuff -->
+        {% block content %}{% endblock %}
+    </body>
+</html>

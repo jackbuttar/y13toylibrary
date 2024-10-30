@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="table_styling">
+    <h3>Delete an Item</h3>
+    <form method="post" class="w3-container">
+        <label for="item_id">Item ID:</label>
+        <input type="text" id="item_id" name="item_id" required>
+        <button type="submit">Delete Item</button>
+    </form>
+</div>
+{% endblock %}

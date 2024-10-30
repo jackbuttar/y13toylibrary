@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="table_styling">
+    <h3>Search for Member to Edit Amount Owed</h3>
+    <form method="post" class="w3-container">
+        <label for="member_id">Member ID:</label>
+        <input type="text" id="member_id" name="member_id" required>
+        <button type="submit">Search</button>
+    </form>
+</div>
+{% endblock %}

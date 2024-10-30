@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+</nav>
+</div>
+<div class="table_styling">
+
+  {% block content %}
+  <h3>Edit Rental</h3>
+  <form method="post" class="w3-container">
+    <br>
+    <label for="item_id">Item ID:</label>
+    <input type="text" id="item_id" name="item_id" value="{{ rental[1] }}" required>  <!-- Assuming Item_ID is the second column -->
+    <br>
+    
+    <label for="member_id">Member ID:</label>
+    <input type="text" id="member_id" name="member_id" value="{{ rental[2] }}" required>  <!-- Assuming Member_ID is the third column -->
+    <br>
+    
+    <label for="rental_date">Rental Date:</label>
+    <input type="date" id="rental_date" name="rental_date" value="{{ rental[3] }}" required>  <!-- Assuming Rental Date is the fourth column -->
+    <br>
+    
+    <label for="returned_date">Returned Date:</label>
+    <input type="date" id="returned_date" name="returned_date" value="{{ rental[4] }}">  <!-- Assuming Returned Date is the fifth column -->
+    <br>
+    
+    <label for="rental_cost">Rental Cost:</label>
+    <input type="text" id="rental_cost" name="rental_cost" value="{{ rental[5] }}" required>  <!-- Assuming Rental Cost is the sixth column -->
+    <br>
+    
+    <label for="late_fee">Late Fee:</label>
+    <input type="text" id="late_fee" name="late_fee" value="{{ rental[6] }}">  <!-- Assuming Late Fee is the seventh column -->
+    <br>
+    
+    <br>
+    <button type="submit">Update Rental</button>
+  </form>
+</div>
+{% endblock %}

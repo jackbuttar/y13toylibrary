@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+</nav>
+</div>
+<div class="table_styling">
+
+
+  {% block content %}
+  <h3>Which member would you like to show rentals for?</h3>
+    <form method="post" class="w3-container">
+      <br>
+      <label for="item">Item</label><input type="text" id="item" name="item" value="{{ request.form['item'] }}">
+      <br>
+      <label for="type">Type of Item</label><input type="text" id="type" name="type" value="{{ request.form['type'] }}">
+      <br>
+      <label for="purchasePrice">Purchase Price:</label><input type="text" id="purchasePrice" name="purchasePrice" value="{{ request.form['purchasePrice'] }}">
+      <br>
+      <br>
+      <button type="submit">Submit</button>
+    </form>
+</div>
+{% endblock %}

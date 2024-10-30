@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+</nav>
+</div>
+<div class="table_styling">
+
+  {% block content %}
+  <h3>Add a New Rental</h3>
+  <form method="post" class="w3-container">
+    <br>
+    <label for="item_id">Item ID:</label>
+    <input type="text" id="item_id" name="item_id" value="{{ request.form['item_id'] }}" required>
+    <br>
+    
+    <label for="member_id">Member ID:</label>
+    <input type="text" id="member_id" name="member_id" value="{{ request.form['member_id'] }}" required>
+    <br>
+    
+    <label for="rental_date">Rental Date:</label>
+    <input type="date" id="rental_date" name="rental_date" value="{{ request.form['rental_date'] }}" required>
+    <br>
+    
+    <label for="returned_date">Returned Date:</label>
+    <input type="date" id="returned_date" name="returned_date" value="{{ request.form['returned_date'] }}">
+    <br>
+    
+    <label for="rental_cost">Rental Cost:</label>
+    <input type="text" id="rental_cost" name="rental_cost" value="{{ request.form['rental_cost'] }}" required>
+    <br>
+    
+    <label for="late_fee">Late Fee:</label>
+    <input type="text" id="late_fee" name="late_fee" value="{{ request.form['late_fee'] }}">
+    <br>
+    
+    <br>
+    <button type="submit">Add Rental</button>
+  </form>
+</div>
+{% endblock %}

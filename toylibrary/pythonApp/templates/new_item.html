@@ -5,7 +5,11 @@
 
 
   {% block content %}
-  <h3>Which member would you like to show rentals for?</h3>
+  <div style="display: flex; align-items: center; justify-content: center; padding: 10px;">
+    <a href="{{ url_for('admin_dashboard') }}" class="btn">Back</a>
+    <h1 style="margin-left: 10px;">New Item</h1>
+  </div>
+  <h3>Please enter your item's details:</h3>
     <form method="post" class="w3-container">
       <br>
       <label for="item">Item</label><input type="text" id="item" name="item" value="{{ request.form['item'] }}">

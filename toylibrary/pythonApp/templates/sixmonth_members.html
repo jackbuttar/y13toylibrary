@@ -2,8 +2,11 @@
 {% extends 'base.html' %}
 <!-- Now i can fill out the blocks that I want -->
 {% block content %}
+<div style="display: flex; align-items: center; justify-content: center; padding: 10px;">
+    <a href="{{ url_for('admin_dashboard') }}" class="btn">Back</a>
+    <h1 style="margin-left: 10px;">Six Month Members</h1>
+</div>
 <div class="table_styling">
-    <h1>Six Month Members</h1>
     <table style="text-align:center;">
         <tr>
             <th width="200">NAME</th>

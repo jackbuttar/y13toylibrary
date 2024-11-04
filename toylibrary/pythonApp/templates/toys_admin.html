@@ -4,19 +4,16 @@
 {% block content %}
 <div style="display: flex; align-items: center; justify-content: center; padding: 10px;">
     <a href="{{ url_for('admin_dashboard') }}" class="btn">Back</a>
-    <h1 style="margin-left: 10px;">All Members</h1>
-  </div>
+    <h1 style="margin-left: 10px;">Toy Database</h1>
+</div>
 <div class="table_styling">
     <table style="text-align:center;">
         <tr>
             <th width="200">ID</th>
             <th width="200">NAME</th>
-            <th width="200">ADDRESS</th>
-            <th width="200">EMAIL</th>
-            <th width="200">PHONE NUMBER</th>
-            <th width="200">DATE JOINED</th>
-            <th width="200">MEMBERSHIP PERIOD</th>
-            <th width="200">AMOUNT OWED</th>
+            <th width="200">TYPE</th>
+            <th width="200">RENTAL PRICE</th>
+            <th width="200">PURCHASE PRICE</th>
         </tr>
         <!-- iterate through the results use the symbols to show "code" in the template -->
         {% for item in results%} 
@@ -24,11 +21,8 @@
             <td>{{ item[0] }}</td>
             <td>{{ item[1] }}</td>
             <td>{{ item[2] }}</td>
-            <td>{{ item[3] }}</td>
-            <td>{{ item[4] }}</td>
-            <td>{{ item[5] }}</td>
-            <td>{{ item[6] }}</td>
-            <td>{{ item[7] }}</td>
+            <td>${{ "{:.2f}".format(item[3]) }}</td>
+            <td>${{ "{:.2f}".format(item[4]) }}</td>
         </tr>
         <!-- must have an "endfor"! dont forget -->
         {% endfor %}

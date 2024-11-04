@@ -1,11 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div style="display: flex; align-items: center; justify-content: center; padding: 10px;">
+    <a href="{{ url_for('search_member') }}" class="btn">Back</a>
+    <h1 style="margin-left: 10px;">Edit Member</h1>
+</div>
 <div class="table_styling">
     <h3>Edit Amount Owed for {{ member[1] }}</h3>  <!-- Assuming member[1] is the member name -->
     <form method="post" class="w3-container">
         <label for="amount_owed">Amount Owed:</label>
-        <input type="text" id="amount_owed" name="amount_owed" value="{{ member[3] }}" required>  <!-- Assuming member[3] is [Amount Owed] -->
+        <input type="text" id="amount_owed" name="amount_owed" value="{{ member[7] }}" required>  <!-- Assuming member[3] is [Amount Owed] -->
         <button type="submit">Update Amount Owed</button>
     </form>
 </div>

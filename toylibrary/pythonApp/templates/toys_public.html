@@ -9,7 +9,7 @@
             <th width="200">ID</th>
             <th width="200">NAME</th>
             <th width="200">TYPE</th>
-            <th width="200">PURCHASE PRICE</th>
+            <th width="200">RENTAL PRICE</th>
         </tr>
         <!-- iterate through the results use the symbols to show "code" in the template -->
         {% for item in results%} 
@@ -17,15 +17,12 @@
             <td>{{ item[0] }}</td>
             <td>{{ item[1] }}</td>
             <td>{{ item[2] }}</td>
-            <td>{{ item[3] }}</td>
-            <td>{{ item[4] }}</td>
-            <td>{{ item[5] }}</td>
-            <td>{{ item[6] }}</td>
-            <td>{{ item[7] }}</td>
-            <td>{{ item[8] }}</td>
+            <td>${{ "{:.2f}".format(item[3]) }}</td>
         </tr>
         <!-- must have an "endfor"! dont forget -->
         {% endfor %}
     </table>
 </div>
+
+<p><strong>Each item's rental price is dictated above, the rental duration is for one week. <br> If the item is not returned by the due date then late fees are charged at a fee of $0.50 per each day late.</strong></p>
 {% endblock %}

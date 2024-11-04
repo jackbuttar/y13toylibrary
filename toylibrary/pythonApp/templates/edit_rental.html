@@ -2,10 +2,16 @@
 
 </nav>
 </div>
+
+
+
 <div class="table_styling">
 
   {% block content %}
-  <h3>Edit Rental</h3>
+  <div style="display: flex; align-items: center; justify-content: center; padding: 10px;">
+    <a href="{{ url_for('search_rental') }}" class="btn">Back</a>
+    <h1 style="margin-left: 10px;">Edit Rental</h1>
+  </div>
   <form method="post" class="w3-container">
     <br>
     <label for="item_id">Item ID:</label>

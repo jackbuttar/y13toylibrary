@@ -34,5 +34,11 @@
     <!-- This is the main page with most stuff we need in it -->
     <!-- This starts and ends a 'block' that the child template will fill out with stuff -->
         {% block content %}{% endblock %}
+
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+        <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+
     </body>
+
+    
 </html>

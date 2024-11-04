@@ -5,6 +5,10 @@
 <div class="table_styling">
 
   {% block content %}
+  <div style="display: flex; align-items: center; justify-content: center; padding: 10px;">
+    <a href="{{ url_for('admin_dashboard') }}" class="btn">Back</a>
+    <h1 style="margin-left: 10px;">New Rental</h1>
+  </div>
   <h3>Add a New Rental</h3>
   <form method="post" class="w3-container">
     <br>

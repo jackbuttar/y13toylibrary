@@ -33,6 +33,14 @@ def toys_public():
     results = cursor.fetchall()
     return render_template('toys_public.html',results=results)
 
+@app.route('/toys_admin')
+def toys_admin():
+    db = get_db()
+    cursor = db.cursor()
+    cursor.execute("SELECT * FROM Items")
+    results = cursor.fetchall()
+    return render_template('toys_admin.html',results=results)
+
 @app.route('/admin_login', methods=('GET', 'POST'))
 def admin_login():
     if request.method == 'POST':
@@ -131,7 +139,7 @@ def new_item():
             # You might want to log the error or flash a message here
             print(f"Error inserting item: {e}")
 
-        return redirect('http://127.0.0.1:8080/toys_public')  # Redirect to a view after insertion
+        return redirect('http://127.0.0.1:8080/toys_admin')  # Redirect to a view after insertion
 
     return render_template('new_item.html')
 
